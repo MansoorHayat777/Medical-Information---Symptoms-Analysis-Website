@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Symptom Checker</title>
+    <link rel="stylesheet" type="text/css" href="Header.css"/>
+    <link rel="stylesheet" type="text/css" href="aboutpage.css"/>
+		<meta charset="utf-8"/>
+  <style type="text/css">
+    
+    .map {
+      float: right;
+      margin-top: 13%;
+      margin-bottom: 50px;
+      margin-right: 50px;
+    }
+
+    #frame
+    {
+      border: 4px solid lightblue;
+      border-radius: 4px;
+      padding: 5px;
+      background-color: white;
+      color: midnightblue;
+      font-size: 18px;
+      font-family: Tahoma;
+      margin-left: 50px;
+      margin-top: 12%;
+      width: 70%;
+      position: absolute;
+      height: 72%;
+      overflow: auto;
+    }
+
+  </style>
+</head>
+<body>
+<div class="border"></div>
+	<div id="hints"></div>
+	<div class="medictab">
+		
+			<h3>MedicInfo <p style="text-decoration:none;">Saving Lives | Protecting People | Sharing Knowledge</p></h3>
+			
+			<form action="SearchResults.php" method="GET">
+				<input type="text" name="search" placeholder="Search MedicInfo..." size="30" onkeyup="showHints(this.value)"/>
+				<input type="submit" value="Search" />
+			</form>
+	</div>
+
+	
+	<div class="navigation" id="navigation">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			
+			<li class="dropdown">
+				<a href="quiz.html" class="dropbtn">Quizzes</a>
+				<div class="dropctn">
+					<a href="diseasequiz.html">Quiz on Diseases</a>
+					<a href="medicinequiz.html">Quiz on Medicines</a>
+				</div>
+			</li>
+			
+			<li class="dropdown">
+				<a href="disease.html" class="dropbtn">Diseases</a>
+				<div class="dropctn">
+					<a href="adeno.html">Adenovirus Infection</a>
+					<a href="sleepsick.html">Sleeping Sickness</a>
+					<a href="arthritis.html">Arthritis</a>
+					<a href="disease.html">More...</a>
+				</div>
+			</li>
+			
+			<li class="dropdown">
+				<a href="medicine.html" class="dropbtn">Medicines</a>
+				<div class="dropctn">
+					<a href="vitaminb12.html">Vitamin B12</a>
+					<a href="metform.html">Metformin</a>
+					<a href="analgesicss.html">Analgesics</a>
+					<a href="medicine.html">More...</a>
+				</div>
+			</li>
+			
+			<li><a href="sympcheck.html" class="active">Symptom Checker</a></li>
+			<li><a href="about.html">About Us</a></li>
+
+		</ul>
+	</div><br><br><br>
+
+
+<img src="crop_human.jpg" alt="Human_Image" usemap="#Map" class="map" />
+
+<map name="Map" id="Map">
+
+    <div id="1">
+    <area alt="hand" title="Hand" shape="poly" coords="153,141,174,131,182,275,161,270" onclick="find('hand')" />
+    </div>
+    <p id="text1"></p>
+
+    <div id="2"><area alt="hand" title="Hand" shape="poly" coords="46,135,74,147,63,274,41,269" onclick="find('hand')"/></div><p id="text2"></p>
+
+    <div id="3"><area alt="shoulder" title="Shoulder" shape="poly" coords="46,117,67,132,90,98,83,89" onclick="find('shoulder')" /></div><p id="text3"> </p>
+
+    <div id="4"><area alt="shoulder" title="Shoulder" shape="poly" coords="159,128,174,115,139,92,131,107" onclick="find('shoulder')" /></div><p id="text4"></p>
+
+    <div id="5"><area alt="chest" title="Chest" shape="poly" coords="78,122,145,124,146,151,80,153" onclick="find('chest')" /></div><p id="text5"></p>
+
+    <div id="6"><area alt="stomach" title="Stomach" shape="poly" coords="79,168,146,174,148,211,76,213" onclick="find('stomach')" /></div><p id="text6"></p>
+
+    <div id="7"><area alt="thigh" title="Thigh" shape="poly" coords="110,252,108,296,76,290,74,248" onclick="find('thigh')" /></div><p id="text7"></p>
+
+    <div id="8"><area alt="thigh" title="Thigh" shape="poly" coords="116,253,152,246,148,290,117,292" onclick="find('thigh')" /></div><p id="text8"></p>
+
+    <div id="9"><area alt="knee" title="Knee" shape="poly" coords="86,315,110,320,110,347,86,348"   onclick="find('knee')" /></div><p id="text9"></p>
+
+    <div id="10"><area alt="knee" title="Knee" shape="poly" coords="115,317,138,310,140,350,119,350" onclick="find('knee')" /></div><p id="text10"></p>
+
+    <div id="11"><area alt="lower-leg" title="Lower Leg" shape="poly" coords="84,360,107,361,111,449,82,449" onclick="find('lowerleg')" /></div><p id="text11"></p>
+
+    <div id="12"><area alt="lower-leg" title="Lower Leg" shape="poly" coords="119,363,145,364,144,448,118,449" onclick="find('lowerleg')" /></div><p id="text12"></p>
+
+    <div id="13"><area alt="neck" title="Neck" shape="poly" coords="96,81,127,81,124,89,98,91" onclick="find('neck')" /></div><p id="text13"></p>
+
+    <div id="14"><area alt="head" title="Head" shape="poly" coords="91,31,136,31,129,74,94,72" onclick="find('head')" /></div><p id="text14"></p>
+    
+</map>
+
+<div id="frame">
+  <p id="frame1">
+    Click on the image on your right side to get to know about General Symptoms that are related to that Organ.
+    <img src="rightarrow.png" width="180px" height="150px" style="float: right;" />
+  </p>
+</div>
+
+<script type="text/javascript">
+  
+function find(txt)
+{
+  if(txt=="hand")
+  {
+    var id = 1;
+  }
+  else if(txt=="shoulder")
+  {
+    var id = 2;
+  }
+  else if(txt=="chest")
+  {
+    var id = 3;
+  }
+  else if(txt=="stomach")
+  {
+    var id = 4;
+  }
+  else if(txt=="thigh")
+  {
+    var id = 5;
+  }
+  else if(txt=="knee")
+  {
+    var id = 6;
+  }
+  else if(txt=="lowerleg")
+  {
+    var id = 7;
+  }
+  else if(txt=="neck")
+  {
+    var id = 8;
+  }
+  else if(txt=="head")
+  {
+    var id = 9;
+  }
+
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function()
+  {
+    if(this.readyState == 4 && this.status == 200)
+    {
+      document.getElementById("frame1").innerHTML = this.responseText;
+    }
+  };
+  xmlhttp.open("GET","symp.php?q="+id, true);
+  xmlhttp.send();
+}
+
+</script>
+
+  <div id="footer">
+    <p style="text-align: center; font-size: 11px;">Thank you for visiting</p>
+    <p style="text-align: center;">MEDICINFO</p>
+    <p style="font-size: 11px; text-align: center;"><abbr title="siddharth.chandra2015@vit.ac.in">Contact Us</abbr> | Visit Again | Stay Healthy |<a href="feedback.php" style="font-size: 11px;">FeedBack</a></p>
+    <hr/>
+      <p style="color: #DCFFFE; margin-left: 10px; font-size: 19px;">Maintained By: -
+      <ul id="credits">
+        <li>Kunal</li>
+        <li>Kanishk</li>
+        <li>Siddharth</li>
+      </ul>
+        <span id="footright1">Submitted To:-</span>
+        <span id="footright2">Dr. G. Malathi</span>
+      </p>
+  </div>
+
+
+
+  <!-- JAVASCRIPT FOR SEARCH SUGGESTIONS -->
+
+  <script type="text/javascript">
+    
+    function showHints(str)
+    {
+      if(str.length == 0 || str == "")
+      {
+        document.getElementById("hints").innerHTML="";
+        document.getElementById("hints").style.border="none";
+        document.getElementById("navigation").style.marginTop = "14px";
+        return;
+      }
+      else
+      {
+        var xmlhttp = new XMLHttpRequest();
+
+        xmlhttp.onreadystatechange = function()
+        {
+          if(this.readyState == 4 && this.status == 200)
+          {
+            document.getElementById("hints").innerHTML = this.responseText;
+            document.getElementById("hints").style.border = "1px solid blue";
+            document.getElementById("navigation").style.marginTop = "36px";
+          }
+        };
+
+        xmlhttp.open("GET", "SearchHints.php?q="+str, true);
+        xmlhttp.send();
+      }
+    }
+
+  </script>
+</body>
+</html>

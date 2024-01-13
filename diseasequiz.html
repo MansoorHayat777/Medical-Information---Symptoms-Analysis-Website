@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MedicInfo | About Us</title>
+	<link rel="stylesheet" type="text/css" href="aboutpage.css"/>
+	<link rel="stylesheet" type="text/css" href="Header.css"/>
+	<style type="text/css">
+		#resultdiv {
+			display: none;
+			border: 2px solid midnightblue;
+			padding: 10px;
+			border-radius: 4px;
+			background-color: #154360;
+			color: #FDFEFE;
+			font-family: Tahoma;
+			font-size: 18px;
+		}
+	</style>
+</head>
+<body>
+	<div class="border"></div>
+	<div id="hints"></div>
+	<div class="medictab">
+		
+			<h3>MedicInfo <p style="text-decoration:none;">Saving Lives | Protecting People | Sharing Knowledge</p></h3>
+			
+			<form action="SearchResults.php" method="GET" autocomplete="off">
+				<input type="text" name="search" placeholder="Search MedicInfo..." size="30" onkeyup="showHints(this.value)"/>
+				<input type="submit" value="Search" />
+			</form>
+	</div>
+
+	
+	<div class="navigation" id="navigation">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			
+			<li class="dropdown">
+				<a href="quiz.html" class="dropbtn active">Quizzes</a>
+				<div class="dropctn">
+					<a href="diseasequiz.html">Quiz on Diseases</a>
+					<a href="medicinequiz.html">Quiz on Medicines</a>
+				</div>
+			</li>
+			
+			<li class="dropdown">
+				<a href="disease.html" class="dropbtn">Diseases</a>
+				<div class="dropctn">
+					<a href="adeno.html">Adenovirus Infection</a>
+					<a href="sleepsick.html">Sleeping Sickness</a>
+					<a href="arthritis.html">Arthritis</a>
+					<a href="disease.html">More...</a>
+				</div>
+			</li>
+			
+			<li class="dropdown">
+				<a href="medicine.html" class="dropbtn">Medicines</a>
+				<div class="dropctn">
+					<a href="vitaminb12.html">Vitamin B12</a>
+					<a href="metform.html">Metformin</a>
+					<a href="analgesicss.html">Analgesics</a>
+					<a href="medicine.html">More...</a>
+				</div>
+			</li>
+			
+			<li><a href="sympcheck.html">Symptom Checker</a></li>
+			<li><a href="about.html">About Us</a></li>
+
+		</ul>
+	</div>
+<br/><br/><br/><br/>
+
+<div style="position: relative; top: 55px; z-index: -1; min-width: 30%; width: 100%;">
+	<p style="word-spacing: 4px;"><span style="font-family: Tahoma, Geneva, sans-serif; font-size: 22px;">Quiz on </span> <span style="letter-spacing: 2px; font-family: 'Droid Sans', Sans-Serif; font-size: 25px; text-decoration: underline;">Diseases</span></p>
+	</div><br/><br/>
+	<div style="position: relative; top: 30px; overflow: auto;" id="ques">
+		<p align="justify" style="font-family: Tahoma, Geneva, sans-serif; font-size: 18px; border: 3px solid midnightblue; padding-top: 8px; padding-left: 10px; padding-right: 10px; border-radius: 4px; padding-bottom: 10px; background-color: #E6F5FF; letter-spacing: 0.5px;"><br/><br/>
+			<span id="heading">
+				What is the definition of Hemorrhage?
+			</span><br/>
+			<input type="radio" name="q1" id="q1_1"/>Injury to the head.<br/>
+			<input type="radio" name="q1" id="q1_2"/>Broken bones.<br/>
+			<input type="radio" name="q1" id="q1_3"/>Bleeding, blood loss.<br/>
+			<input type="radio" name="q1" id="q1_4"/>None Of these.<br/>
+			<br/>
+
+			<span id="heading">
+				When someone has Hepatitis, which organ is affected?
+			</span><br/>
+			<input type="radio" name="q2" id="q2_1"/>The Lung.<br/>
+			<input type="radio" name="q2" id="q2_2"/>The Liver.<br/>
+			<input type="radio" name="q2" id="q2_3"/>The Heart.<br/>
+			<input type="radio" name="q2" id="q2_4"/>None Of these.<br/>
+			<br/>
+
+			<span id="heading">
+				What is Cardiac Arrest?
+			</span><br/>
+			<input type="radio" name="q3" id="q3_1"/>Resting in your Car.<br/>
+			<input type="radio" name="q3" id="q3_2"/>Failure of the Heart to contract.<br/>
+			<input type="radio" name="q3" id="q3_3"/>Heart Pumping too fast.<br/>
+			<input type="radio" name="q3" id="q3_4"/>None Of these.<br/>
+			<br/>
+
+			<span id="heading">
+				What is the Flu?
+			</span><br/>
+			<input type="radio" name="q4" id="q4_1"/>All of these.<br/>
+			<input type="radio" name="q4" id="q4_2"/>Sick from food poisoning.<br/>
+			<input type="radio" name="q4" id="q4_3"/>Respiratory infection caused by a number of viruses.<br/>
+			<input type="radio" name="q4" id="q4_4"/>Bacteria infection in the throat.<br/>
+			<br/>
+
+			<span id="heading">
+				Pathology is ....
+			</span><br/>
+			<input type="radio" name="q5" id="q5_1"/>Study of Diseases.<br/>
+			<input type="radio" name="q5" id="q5_2"/>Study of bones.<br/>
+			<input type="radio" name="q5" id="q5_3"/>Brain scan.<br/>
+			<input type="radio" name="q5" id="q5_4"/>All of these.<br/>
+			<br/>
+
+			<span id="heading">
+				Paralysis of 4 quadrants of the body is called ...
+			</span><br/>
+			<input type="radio" name="q6" id="q6_1"/>Full Paralysis.<br/>
+			<input type="radio" name="q6" id="q6_2"/>Quadriplegia.<br/>
+			<input type="radio" name="q6" id="q6_3"/>Paraparesis.<br/>
+			<input type="radio" name="q6" id="q6_4"/>None Of these.<br/>
+			<br/>
+
+			<span id="heading">
+				What Is Alzheimer's disease?
+			</span><br/>
+			<input type="radio" name="q7" id="q7_1"/>A type of blood disorder.<br/>
+			<input type="radio" name="q7" id="q7_2"/>A type of cancer.<br/>
+			<input type="radio" name="q7" id="q7_3"/>A type of dementia that causes problems with memory, thinking and behavior.<br/>
+			<input type="radio" name="q7" id="q7_4"/>None Of these.<br/>
+			<br/>
+
+			<span id="heading">
+				An infection of the gums involving margin of the teeth with the gum is known as ...
+			</span><br/>
+			<input type="radio" name="q8" id="q8_1"/>Diarrhea.<br/>
+			<input type="radio" name="q8" id="q8_2"/>Bird Flu.<br/>
+			<input type="radio" name="q8" id="q8_3"/>Toothache.<br/>
+			<input type="radio" name="q8" id="q8_4"/>Pyorrhoea.<br/>
+			<br/>
+
+			<span id="heading">
+				Typhoid fever is caused by ...
+			</span><br/>
+			<input type="radio" name="q9" id="q9_1"/>Salmonella typhi bacteria.<br/>
+			<input type="radio" name="q9" id="q9_2"/>Mosquito.<br/>
+			<input type="radio" name="q9" id="q9_3"/>Viruses.<br/>
+			<input type="radio" name="q9" id="q9_4"/>None Of these.<br/>
+			<br/>
+
+			<span id="heading">
+				Diseases which spread by contact are called ...
+			</span><br/>
+			<input type="radio" name="q10" id="q10_1"/>Contact Disease.<br/>
+			<input type="radio" name="q10" id="q10_2"/>Contagious diseases.<br/>
+			<input type="radio" name="q10" id="q10_3"/>Spreading Disease.<br/>
+			<input type="radio" name="q10" id="q10_4"/>None Of these.<br/><br/>
+
+			<button type="button" onclick="check()" style="padding: 4px; border: 1px solid blue;">Submit Your Answers !</button>
+			<br/>
+		</p>
+		
+	</div>
+	<br/><br/>
+
+	<script type="text/javascript">
+		
+	function check()
+	{
+		var count = 0;
+		if(document.getElementById("q1_3").checked == true)
+		{
+			count++;
+		}
+		if(document.getElementById("q2_2").checked == true)
+		{
+			count++;
+		}
+		if(document.getElementById("q3_2").checked == true)
+		{
+			count++;
+		}
+		if(document.getElementById("q4_3").checked == true)
+		{
+			count++;
+		}
+		if(document.getElementById("q5_1").checked == true)
+		{
+			count++;
+		}
+		if(document.getElementById("q6_2").checked == true)
+		{
+			count++;
+		}
+		if(document.getElementById("q7_3").checked == true)
+		{
+			count++;
+		}
+		if(document.getElementById("q8_4").checked == true)
+		{
+			count++;
+		}
+		if(document.getElementById("q9_1").checked == true)
+		{
+			count++;
+		}
+		if(document.getElementById("q10_2").checked == true)
+		{
+			count++;
+		}
+		
+		var per = (count/10)*100;
+		per = per.toPrecision(4);
+		document.getElementById("result").innerHTML = per;
+		document.getElementById("resultdiv").style.display = "block";
+		document.getElementById("ques").style.display = "none";
+	}
+
+	</script>
+
+	<div id="resultdiv">
+		
+		<span>Your Result is as follows : <span id="result"></span>% correct responses.</span><br/><br/>
+		<span>
+			Correct Answers are as follows: <br/>
+			1. Bleeding , Blood Loss.<br/>
+			2. The Liver.<br/>
+			3. Failure of the Heart to contract.<br/>
+			4. Respiratory infection caused by a number of viruses.<br/>
+			5. Study of Diseases.<br/>
+			6. Quadriplegia.<br/>
+			7. A type of dementia that causes problems with memory, thinking and behavior.<br/>
+			8. Pyorrhoea.<br/>
+			9. Salmonella typhi bacteria.<br/>
+			10. Contagious diseases.<br/>
+		</span>
+
+	</div><br/>
+
+	<div id="footer">
+		<p style="text-align: center; font-size: 11px;">Thank you for visiting</p>
+		<p style="text-align: center;">MEDICINFO</p>
+		<p style="font-size: 11px; text-align: center;"><abbr title="siddharth.chandra2015@vit.ac.in">Contact Us</abbr> | Visit Again | Stay Healthy |<a href="feedback.php" style="font-size: 11px;">FeedBack</a></p>
+		<hr/>
+			<p style="color: #DCFFFE; margin-left: 10px; font-size: 19px;">Maintained By: -
+			<ul id="credits">
+				<li>Kunal</li>
+				<li>Kanishk</li>
+				<li>Siddharth</li>
+			</ul>
+				<span id="footright1">Submitted To:-</span>
+				<span id="footright2">Dr. G. Malathi</span>
+			</p>
+	</div>
+
+
+
+	<!-- JAVASCRIPT FOR SEARCH SUGGESTIONS -->
+
+	<script type="text/javascript">
+		
+		function showHints(str)
+		{
+			if(str.length == 0 || str == "")
+			{
+				document.getElementById("hints").innerHTML="";
+				document.getElementById("hints").style.border="none";
+				document.getElementById("navigation").style.marginTop = "14px";
+				return;
+			}
+			else
+			{
+				var xmlhttp = new XMLHttpRequest();
+
+				xmlhttp.onreadystatechange = function()
+				{
+					if(this.readyState == 4 && this.status == 200)
+					{
+						document.getElementById("hints").innerHTML = this.responseText;
+						document.getElementById("hints").style.border = "1px solid blue";
+						document.getElementById("navigation").style.marginTop = "36px";
+					}
+				};
+
+				xmlhttp.open("GET", "SearchHints.php?q="+str, true);
+				xmlhttp.send();
+			}
+		}
+
+	</script>
+</body>
+</html>

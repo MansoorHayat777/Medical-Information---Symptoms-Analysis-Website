@@ -1,0 +1,77 @@
+ul.vertNav {
+	position: relative;
+	width: 19%;
+	border: 1px solid #00243D;
+	top: 120px;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	display: inline-block;
+	border: 2px solid midnightblue;
+	border-radius: 3px;
+}
+ul.vertNav li a {
+	text-decoration: none;
+	display: block;
+	font-size: 18px;
+	padding: 6px;
+	text-align: center;
+	border-bottom: 1px solid #007B94;
+	color: #002D35;
+	font-family: Tahoma, Geneva, sans-serif;
+	letter-spacing: 0.6px;
+}
+
+ul.vertNav li a:hover {
+	text-decoration: underline;
+}
+#linkactive
+{
+	background-color: #0D4A74;
+	color: #FDFEFE;
+}
+
+
+#framecss {
+	position: relative;
+	left: 2%;
+	top: 119px;
+	width: 78%;
+	height: 392px;
+	overflow: scroll;
+	display: inline-block;
+	border: 2px solid midnightblue;
+	border-radius: 3px;
+}
+
+
+div#footer, div#footer a {
+	background-color: #003375;
+	width: 100%;
+	position: relative;
+	left: 0px;
+	right: 0px;
+	color: #DCFFFE;
+	font-size: 14px;
+	font-family: "Droid Sans", sans-serif;
+	letter-spacing: 2px;
+	overflow: auto;
+	text-decoration: none;
+} 
+div#footer ul#credits {
+	list-style-type: circle;
+	color: #DCFFFE;
+}
+div#footer span#footright1 {
+	margin-left: 85%;
+	font-size: 19px;
+	position: absolute;
+	top: 50%;
+}
+div#footer span#footright2 {
+	margin-left: 85%;
+	font-size: 14px;
+	position: absolute;
+	top: 65%;
+}
